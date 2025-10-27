@@ -17,7 +17,7 @@ const HomePage = () => {
           <h1 id = "name"> I'm <span className = "gradient"> Sophie Choi </span> </h1>
           <h2 id = "intro-line"> CS @ UC Irvine </h2>
           <a 
-            href="https://docs.google.com/document/d/1Gdhk_iQm3vEvShKhddscP8zjbGM8t6YaHUc2fSIxDSg/edit?usp=sharing" 
+            href="https://docs.google.com/document/d/1gPl1kaaAtZ1gQPPoQpT3EqHID5oDk0dGgQp5wZGsR-I/edit?usp=sharing" 
             target="_blank" 
             rel="noopener noreferrer"
           >
