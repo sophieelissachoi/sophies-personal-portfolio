@@ -1,151 +1,130 @@
-import NavBar from '../NavBar/Navbar';
-import SkillsCard from './SkillsCard';
-import HTML from '../../assets/html.png';
-import CSS from '../../assets/css.png';
-import JavaScript from '../../assets/javascript.png';
-import C from '../../assets/c.png';
-import Java from '../../assets/java.webp';
-import Python from '../../assets/python.png';
-import React from '../../assets/react.svg';
-import Node from '../../assets/node.png';
-import Ionic from '../../assets/ionic.webp';
-import Capacitor from '../../assets/capacitor.svg';
-import TailwindCSS from '../../assets/tailwindcss.png';
-import Figma from '../../assets/figma.png';
-import Firebase from '../../assets/firebase.png';
-import GoogleCloud from '../../assets/googlecloud.png';
-import Cloudflare from '../../assets/cloudflare.png';
-import Render from '../../assets/render.png';
-import Xcode from '../../assets/xcode.png';
-import Unity from '../../assets/unity.avif';
-import GirlsWhoCode from '../../assets/girlswhocode.webp';
-import CCNA from '../../assets/ccna.png';
+import NavBar from "../NavBar/Navbar";
+import SkillsCard from "./SkillsCard";
+import HTML from "../../assets/html.png";
+import CSS from "../../assets/css.png";
+import JavaScript from "../../assets/javascript.png";
+import C from "../../assets/c.png";
+import Java from "../../assets/java.webp";
+import Python from "../../assets/python.png";
+import React from "../../assets/react.svg";
+import Node from "../../assets/node.png";
+import Ionic from "../../assets/ionic.webp";
+import Capacitor from "../../assets/capacitor.svg";
+import TailwindCSS from "../../assets/tailwindcss.png";
+import Figma from "../../assets/figma.png";
+import Firebase from "../../assets/firebase.png";
+import GoogleCloud from "../../assets/googlecloud.png";
+import Cloudflare from "../../assets/cloudflare.png";
+import Render from "../../assets/render.png";
+import Xcode from "../../assets/xcode.png";
+import Unity from "../../assets/unity.avif";
+import GirlsWhoCode from "../../assets/girlswhocode.webp";
+import CCNA from "../../assets/ccna.png";
+import Proxmox from "../../assets/proxmox.png";
+import Authentik from "../../assets/authentik.png";
+import Postgresql from "../../assets/postgresql.png";
+import Chakra from "../../assets/chakra.png";
+import TypeScript from "../../assets/typescript.png";
+import ExpressJs from "../../assets/expressjs.svg";
+import Linux from "../../assets/linux.png";
 
 const Skills = () => {
-  return (
-    <div>
-      <NavBar/>
-      <div className = "mt-20 max-md:-translate-x-26">
-        <h1 className = "skills gradient max-md:translate-x-10"> Skills </h1>
-        <h4 className = "purple-gradient mt-10 max-md:translate-x-10"> Languages </h4>
-        <div className = "max-md:translate-x-6">
-          <div className = "flex max-lg:flex-col space-x-10 mt-10 max-lg:ml-17 max-lg:space-y-10">
-            <SkillsCard
-              skill = "HTML"
-              image = {HTML}
-            />
-            <SkillsCard
-              skill = "CSS"
-              image = {CSS}
-            />
-            <SkillsCard
-              skill = "JavaScript"
-              image = {JavaScript}
-            />
-          </div>
-          
-          <div className = "flex max-lg:flex-col space-x-10 mt-10 max-lg:ml-17 max-lg:space-y-10">
-            <SkillsCard
-              skill = "C#"
-              image = {C}
-            />
-            <SkillsCard
-              skill = "Java"
-              image = {Java}
-            />
-            <SkillsCard
-              skill = "Python"
-              image = {Python}
-            />
-          </div>
+	const languages = [
+		{ skill: "HTML", image: HTML },
+		{ skill: "CSS", image: CSS },
+		{ skill: "JavaScript", image: JavaScript },
+		{ skill: "Python", image: Python },
+		{ skill: "Java", image: Java },
+		{ skill: "C#", image: C },
+	];
 
-          <h4 className = "purple-gradient mt-10 max-md:translate-x-4"> Frameworks/Libraries </h4>
-          <div className = "flex max-lg:flex-col space-x-10 mt-10 max-lg:ml-17 max-lg:space-y-10">
-            <SkillsCard
-              skill = "React"
-              image = {React}
-            />
-            <SkillsCard
-              skill = "Node.js"
-              image = {Node}
-            />
-            <SkillsCard
-              skill = "Tailwind CSS"
-              image = {TailwindCSS}
-            />
-          </div>
+	const frameworks = [
+		{ skill: "React", image: React },
+		{ skill: "TypeScript", image: TypeScript },
+		{ skill: "PostgreSQL", image: Postgresql },
+		{ skill: "Express.js", image: ExpressJs },
+		{ skill: "TailwindCSS", image: TailwindCSS },
+		{ skill: "ChakraUI", image: Chakra },
+		{ skill: "Ionic", image: Ionic },
+		{ skill: "Capacitor", image: Capacitor },
+	];
 
-          <div className = "flex max-lg:flex-col space-x-10 mt-10 max-lg:ml-17 max-lg:space-y-10 lg:translate-x-45">
-            <SkillsCard
-              skill = "Ionic"
-              image = {Ionic}
-            />
-            <SkillsCard
-              skill = "Capacitor"
-              image = {Capacitor}
-            />
-          </div>
+	const tools = [
+		{ skill: "Figma", image: Figma },
+		{ skill: "Proxmox", image: Proxmox },
+		{ skill: "Linux", image: Linux },
+		{ skill: "Authentik", image: Authentik },
+		{ skill: "Firebase", image: Firebase },
+		{ skill: "Google Cloud", image: GoogleCloud },
+		{ skill: "Cloudflare", image: Cloudflare },
+		{ skill: "Render", image: Render },
+		{ skill: "Xcode", image: Xcode },
+		{ skill: "Unity", image: Unity },
+	];
 
-          <h4 className = "purple-gradient mt-10 max-md:translate-x-4"> Tools </h4>
-          <div className = "flex max-lg:flex-col space-x-10 mt-10 max-lg:ml-17 max-lg:space-y-10">
-            <SkillsCard
-              skill = "Figma"
-              image = {Figma}
-            />
-            <SkillsCard
-              skill = "Firebase"
-              image = {Firebase}
-            />
-            <SkillsCard
-              skill = "Google Cloud"
-              image = {GoogleCloud}
-            />
-          </div>
+	const certifications = [
+		{ skill: "CCNA", image: CCNA },
+		{ skill: "Intuit 1", image: GirlsWhoCode },
+		{ skill: "Data Science for Good", image: GirlsWhoCode },
+		{ skill: "Intro to Data Science", image: GirlsWhoCode },
+	];
 
-          <div className = "flex max-lg:flex-col space-x-10 mt-10 max-lg:ml-17 max-lg:space-y-10">
-            <SkillsCard
-              skill = "Cloudflare"
-              image = {Cloudflare}
-            />
-            <SkillsCard
-              skill = "Render"
-              image = {Render}
-            />
-            <SkillsCard
-              skill = "Xcode"
-              image = {Xcode}
-            />
-          </div>
-          <div className = "flex max-lg:flex-col space-x-10 mt-10 max-lg:ml-17 max-lg:space-y-10 lg:translate-x-102">
-            <SkillsCard
-              skill = "Unity"
-              image = {Unity}
-            />
-          </div>
+	return (
+		<div>
+			<NavBar />
+			<div className="mt-20 max-md:-translate-x-26">
+				<h1 className="skills gradient max-md:translate-x-20"> Skills </h1>
+				<h4 className="purple-gradient mt-10 max-md:translate-x-20"> Languages </h4>
+				<div className="flex max-md:grid-cols-1 grid grid-cols-3 gap-8 max-md:translate-x-40 max-sm:translate-x-20">
+					{languages.map(({ skill, image }) => (
+						<SkillsCard
+							key={skill}
+							skill={skill}
+							image={image}
+						/>
+					))}
+				</div>
 
-          <h4 className = "purple-gradient mt-10 max-md:translate-x-4"> Certifications </h4>
-          <div className = "flex max-lg:flex-col space-x-10 mt-10 max-lg:ml-17 max-lg:space-y-10 mb-20">
-            <SkillsCard
-              skill = "CCNA"
-              image = {CCNA}
-            />
-            <SkillsCard
-              skill = "Intuit 1"
-              image = {GirlsWhoCode}
-            />
-            <SkillsCard
-              skill = "Data Science for Good"
-              image = {GirlsWhoCode}
-            />
-            <SkillsCard
-              skill = "Intro to Data Science"
-              image = {GirlsWhoCode}
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
+				<h4 className="purple-gradient mt-10 max-md:translate-x-15">
+					Frameworks/Libraries
+				</h4>
+				<div className="flex max-md:grid-cols-1 grid grid-cols-3 gap-8 max-md:translate-x-40 max-sm:translate-x-20">
+					{frameworks.map(({ skill, image }) => (
+						<SkillsCard
+							key={skill}
+							skill={skill}
+							image={image}
+						/>
+					))}
+				</div>
 
-export default Skills
+				<h4 className="purple-gradient mt-10 max-md:translate-x-15"> Tools </h4>
+				<div className="flex max-md:grid-cols-1 grid grid-cols-3 gap-8 max-md:translate-x-40 max-sm:translate-x-20">
+					{tools.map(({ skill, image }) => (
+						<SkillsCard
+							key={skill}
+							skill={skill}
+							image={image}
+						/>
+					))}
+				</div>
+
+				<h4 className="purple-gradient mt-10 max-md:translate-x-15">
+					{" "}
+					Certifications{" "}
+				</h4>
+				<div className="flex max-md:grid-cols-1 grid grid-cols-3 gap-8 max-md:translate-x-40 max-sm:translate-x-20">
+					{certifications.map(({ skill, image }) => (
+						<SkillsCard
+							key={skill}
+							skill={skill}
+							image={image}
+						/>
+					))}
+				</div>
+			</div>
+		</div>
+	);
+};
+
+export default Skills;
