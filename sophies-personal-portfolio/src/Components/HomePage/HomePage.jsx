@@ -2,7 +2,7 @@ import "./HomePage.css";
 import NavBar from "../NavBar/Navbar";
 import Socials from "../Socials/Socials";
 import Sophie from "../../assets/sophie.jpg";
-import Resume from "../../../public/resume.pdf";
+import Resume from "/resume.pdf";
 
 const HomePage = () => {
 	return (
