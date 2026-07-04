@@ -12,6 +12,7 @@ const Navbar = () => {
 			justifyContent="center"
 			alignItems="center"
 			position="fixed"
+			boxShadow="xl"
 		>
 			<Heading
 				fontSize="4xl"
@@ -26,7 +27,7 @@ const Navbar = () => {
 				size="sm"
 				borderBottom="#C8B2A9"
 			>
-				<TabList gap="15px">
+				<TabList gap="20px">
 					<Tab
 						fontSize="2xl"
 						_selected={{ color: "white", borderColor: "white" }}
