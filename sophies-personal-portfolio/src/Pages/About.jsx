@@ -79,6 +79,20 @@ const About = () => {
 						<Socials />
 					</VStack>
 				</HStack>
+				<Text
+					fontFamily="CaveatBrush"
+					fontSize="36px"
+					mt="5%"
+					width="80%"
+				>
+					Nice to meet you! My name is Sophie Choi and I am a 2nd year Computer
+					Science major at UC Irvine. I have well-rounded experiences in many
+					different CS fields, such as full-stack development, infrastructure,
+					UI/UX design, and blockchain! My goal is to become a software engineer
+					or site reliability engineer. I approach every project with care,
+					integrity, creativity, and collaboration. Enjoy looking through my
+					portfolio!
+				</Text>
 			</VStack>
 		</Box>
 	);
