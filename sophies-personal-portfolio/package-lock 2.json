@@ -2171,9 +2171,9 @@
       "license": "MIT"
     },
     "node_modules/baseline-browser-mapping": {
-      "version": "2.10.42",
-      "resolved": "https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.10.42.tgz",
-      "integrity": "sha512-c/jurFrDLyui7o1J86yLkRu4LMsTYcBohveus7/I2Hzdn9KIP2bdJPTue/lR1KH46enoPbD77GKeSYNdyPoD3Q==",
+      "version": "2.10.41",
+      "resolved": "https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.10.41.tgz",
+      "integrity": "sha512-WwS7MHhqGHHlaVsqRZnhvCEMS0owDX+SxRlve7JkuH7My1Ara3ZriTmCQupPfYjxMZ8I/tgxtJYr2t7taHaH4A==",
       "dev": true,
       "license": "Apache-2.0",
       "bin": {
@@ -2309,9 +2309,9 @@
       "license": "MIT"
     },
     "node_modules/color2k": {
-      "version": "2.0.4",
-      "resolved": "https://registry.npmjs.org/color2k/-/color2k-2.0.4.tgz",
-      "integrity": "sha512-OXAPGFRNeLFnUfqDtloYdxkwsJoIdXe28+bjbpJiPqyei2HPa3VHmMCWa0Qe62+U4Ftf9Hj7hRssOkxz7WiWbg==",
+      "version": "2.0.3",
+      "resolved": "https://registry.npmjs.org/color2k/-/color2k-2.0.3.tgz",
+      "integrity": "sha512-zW190nQTIoXcGCaU08DvVNFTmQhUpnJfVuAKfWqUQkflXKpaDdpaYoM0iluLS9lgJNHyBF58KKA2FBEwkD7wog==",
       "license": "MIT"
     },
     "node_modules/commander": {

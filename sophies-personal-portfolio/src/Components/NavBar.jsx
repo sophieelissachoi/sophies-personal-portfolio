@@ -13,6 +13,7 @@ const Navbar = () => {
 			alignItems="center"
 			position="fixed"
 			boxShadow="xl"
+			zIndex="1000"
 		>
 			<Heading
 				fontSize="4xl"

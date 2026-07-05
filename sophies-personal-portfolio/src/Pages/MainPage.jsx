@@ -1,5 +1,6 @@
 import NavBar from "../Components/NavBar";
 import About from "./About";
+import Experiences from "./Experiences";
 import Paper from "../assets/paper.avif";
 import { Box } from "@chakra-ui/react";
 
@@ -12,6 +13,7 @@ const MainPage = () => {
 		>
 			<NavBar />
 			<About />
+			<Experiences />
 		</Box>
 	);
 };
