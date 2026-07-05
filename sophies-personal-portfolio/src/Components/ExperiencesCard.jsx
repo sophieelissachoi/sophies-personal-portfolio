@@ -24,6 +24,7 @@ import {
 	MenuDivider,
 	Icon,
 	Button,
+	Portal,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
@@ -119,15 +120,16 @@ const ExperiencesCard = ({
 							justifyContent="flex-start"
 							pr="10px"
 							pl="10px"
-							zIndex="10"
 						>
 							PROJECTS
 						</MenuButton>
-						<MenuList zIndex="10">
-							{projects.map((p) => (
-								<MenuItem zIndex="10">{p}</MenuItem>
-							))}
-						</MenuList>
+						<Portal>
+							<MenuList zIndex="1500">
+								{projects.map((p) => (
+									<MenuItem key={p}>{p}</MenuItem>
+								))}
+							</MenuList>
+						</Portal>
 					</Menu>
 
 					<Menu>
@@ -140,15 +142,16 @@ const ExperiencesCard = ({
 							bg="#614B49"
 							color="white"
 							justifyContent="flex-start"
-							zIndex="10"
 						>
 							SKILLS
 						</MenuButton>
-						<MenuList zIndex="10">
-							{skills.map((p) => (
-								<MenuItem zIndex="100">{p}</MenuItem>
-							))}
-						</MenuList>
+						<Portal>
+							<MenuList zIndex="1500">
+								{skills.map((p) => (
+									<MenuItem key={p}>{p}</MenuItem>
+								))}
+							</MenuList>
+						</Portal>
 					</Menu>
 				</HStack>
 			</CardFooter>
