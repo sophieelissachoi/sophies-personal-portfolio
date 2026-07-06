@@ -3,6 +3,8 @@ import About from "./About";
 import Experiences from "./Experiences";
 import Portfolio from "./Portfolio";
 import Skills from "./Skills";
+import Contact from "./Contact";
+
 import Paper from "../assets/paper.avif";
 import NAWCWD from "../assets/nawcwd.png";
 import Cyber from "../assets/cyber.png";
@@ -92,7 +94,7 @@ const MainPage = () => {
 				"Collaborated in Agile sprints with pair programming and direct client feedback to ship features against a 2-week deadline",
 			],
 			type: "Club",
-			projects: ["Global Creation Foundation (GCF) Dashboard"],
+			projects: ["GCF Dashboard"],
 			skills: [
 				"React",
 				"Node.js",
@@ -140,7 +142,7 @@ const MainPage = () => {
 		},
 		{
 			title: "EasyVM",
-			skills: "Go, React, TypeScript, Chakra UI, huma, chi, Proxmox API",
+			skills: "Go, React, TypeScript, Proxmox API, Chakra UI",
 			description:
 				"A Proxmox management frontend built with a Go backend (huma v2 framework, chi router, luthermonson/go-proxmox) and a React/TypeScript frontend. Includes endpoints for VM CRUD operations, config management, next VMID reservation, node stats, and job listing, paired with a dashboard featuring VM row cards, config drawers, and batch clone modals.",
 			link: null,
@@ -149,15 +151,17 @@ const MainPage = () => {
 		},
 		{
 			title: "GCF Dashboard",
-			skills: "PLACEHOLDER — add tech stack",
-			description: "PLACEHOLDER — add project description",
+			skills:
+				"React, JavaScript, Axios, Chakra UI, Node.js, Express, REST API, PostgreSQL, AWS SDK, Firebase, Yarn, Agile methodology",
+			description:
+				"Global Creation Foundation (GCF) is a non-profit organization that expands music education to underserved communities across the globe. We built GCF a dashboard to help streamline organizing their programs, inventory, students, and more. There are unique features that are specifically tailored to their organization, such as role based access control, instrument tracking, program tracking, playlists, visual maps, etc. So far, GCF has donated 150+ instruments and has reached 500+ students in 6 different countries",
 			link: null,
 			photo: GCF,
 			additionalPhoto: GCFDashboard,
 		},
 		{
-			title: "Smart Contract Security Analysis",
-			skills: "Python, FastAPI, Slither, Solidity",
+			title: "Smart Contract Security",
+			skills: "Python, FastAPI, Slither, Solidity, PostgreSQL, Docker",
 			description:
 				"A smart contract security analysis pipeline using Slither to detect vulnerabilities like reentrancy in Solidity contracts. Successfully identified a reentrancy bug in a vulnerable vault contract, demonstrating automated static analysis for smart contract auditing.",
 			link: null,
@@ -215,10 +219,33 @@ const MainPage = () => {
 			pb="10%"
 		>
 			<NavBar />
-			<About />
-			<Experiences experiences={experiences} />
-			<Portfolio projects={projects} />
-			<Skills skills={skills} />
+
+			<Box
+				bgImage={Paper}
+				minHeight="100vh"
+				width="100%"
+				pb="10%"
+			>
+				<NavBar />
+				<Box id="about">
+					<About />
+				</Box>
+				<Box id="experiences">
+					<Experiences
+						experiences={experiences}
+						projects={projects}
+					/>
+				</Box>
+				<Box id="portfolio">
+					<Portfolio projects={projects} />
+				</Box>
+				<Box id="skills">
+					<Skills skills={skills} />
+				</Box>
+				<Box id="contact">
+					<Contact />
+				</Box>
+			</Box>
 		</Box>
 	);
 };

@@ -1,6 +1,13 @@
 import React from "react";
 import { Tabs, TabList, Tab, HStack, Box, Heading } from "@chakra-ui/react";
 
+const scrollToSection = (id) => {
+	const el = document.getElementById(id);
+	if (el) {
+		el.scrollIntoView({ behavior: "smooth", block: "start" });
+	}
+};
+
 const Navbar = () => {
 	return (
 		<HStack
@@ -32,30 +39,35 @@ const Navbar = () => {
 					<Tab
 						fontSize="2xl"
 						_selected={{ color: "white", borderColor: "white" }}
+						onClick={() => scrollToSection("about")}
 					>
 						About
 					</Tab>
 					<Tab
 						fontSize="2xl"
 						_selected={{ color: "white", borderColor: "white" }}
+						onClick={() => scrollToSection("experiences")}
 					>
 						Experiences
 					</Tab>
 					<Tab
 						fontSize="2xl"
 						_selected={{ color: "white", borderColor: "white" }}
+						onClick={() => scrollToSection("portfolio")}
 					>
 						Portfolio
 					</Tab>
 					<Tab
 						fontSize="2xl"
 						_selected={{ color: "white", borderColor: "white" }}
+						onClick={() => scrollToSection("skills")}
 					>
 						Skills
 					</Tab>
 					<Tab
 						fontSize="2xl"
 						_selected={{ color: "white", borderColor: "white" }}
+						onClick={() => scrollToSection("contact")}
 					>
 						Contact
 					</Tab>
