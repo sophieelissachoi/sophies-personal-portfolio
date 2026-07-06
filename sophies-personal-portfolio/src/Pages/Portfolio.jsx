@@ -1,10 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import Polaroid from "../Components/Polaroid";
 import { Heading, Box, VStack, HStack } from "@chakra-ui/react";
 
-const Portfolio = ({ projects }) => {
-	const [openIndex, setOpenIndex] = useState(null);
+const Portfolio = ({ projects, openTitle, setOpenTitle }) => {
 	const tilts = [-8, 6, -6, 9];
+
+	const handleToggle = (title) => {
+		if (openTitle === title) {
+			setTimeout(() => setOpenTitle(null), 250);
+		} else {
+			setOpenTitle(title);
+		}
+	};
 
 	return (
 		<Box
@@ -17,7 +24,6 @@ const Portfolio = ({ projects }) => {
 				<Heading
 					fontFamily="AmaticSC"
 					fontSize="60px"
-					mb="5%"
 				>
 					Portfolio
 				</Heading>
@@ -25,10 +31,9 @@ const Portfolio = ({ projects }) => {
 				<HStack
 					spacing="-20px"
 					align="flex-start"
-					gap="15px"
 				>
 					{projects.map((p, i) => {
-						if (openIndex !== null && openIndex !== i) return null;
+						if (openTitle !== null && openTitle !== p.title) return null;
 
 						return (
 							<Polaroid
@@ -40,8 +45,8 @@ const Portfolio = ({ projects }) => {
 								photo={p.photo}
 								additionalPhoto={p.additionalPhoto}
 								tilt={tilts[i % tilts.length]}
-								isOpen={openIndex === i}
-								onClick={() => setOpenIndex(openIndex === i ? null : i)}
+								isOpen={openTitle === p.title}
+								onClick={() => handleToggle(p.title)}
 							/>
 						);
 					})}

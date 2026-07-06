@@ -2,7 +2,7 @@ import React from "react";
 import ExperiencesCard from "../Components/ExperiencesCard";
 import { Heading, Box, VStack } from "@chakra-ui/react";
 
-const Experiences = ({ experiences }) => {
+const Experiences = ({ experiences, projects, onProjectClick }) => {
 	return (
 		<Box
 			pt="10%"
@@ -28,6 +28,8 @@ const Experiences = ({ experiences }) => {
 						projects={e.projects}
 						skills={e.skills}
 						photo={e.photo}
+						allProjects={projects}
+						onProjectClick={onProjectClick}
 					/>
 				))}
 			</VStack>

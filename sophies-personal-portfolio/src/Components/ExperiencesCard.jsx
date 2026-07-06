@@ -4,25 +4,18 @@ import {
 	CardHeader,
 	CardBody,
 	CardFooter,
-	Heading,
 	Text,
 	Image,
 	VStack,
 	HStack,
-	List,
-	ListItem,
 	UnorderedList,
+	ListItem,
 	Divider,
 	Badge,
 	Menu,
 	MenuButton,
 	MenuList,
 	MenuItem,
-	MenuItemOption,
-	MenuGroup,
-	MenuOptionGroup,
-	MenuDivider,
-	Icon,
 	Button,
 	Portal,
 } from "@chakra-ui/react";
@@ -36,8 +29,15 @@ const ExperiencesCard = ({
 	projects,
 	skills,
 	photo,
+	allProjects,
+	onProjectClick,
 }) => {
 	const badgeColor = type === "Internship" ? "#EA9BA2" : "#C8E491";
+
+	const handleProjectClick = (projectName) => {
+		const match = allProjects?.find((p) => p.title === projectName);
+		if (match) onProjectClick(match.title);
+	};
 
 	return (
 		<Card
@@ -50,7 +50,7 @@ const ExperiencesCard = ({
 			mt="20px"
 			zIndex="1"
 		>
-			<HStack>
+			<HStack align="flex-start">
 				<Image
 					src={photo}
 					ml="20px"
@@ -71,7 +71,6 @@ const ExperiencesCard = ({
 							{company}
 						</Text>
 					</CardHeader>
-
 					<CardBody
 						mt="-30"
 						ml="30"
@@ -100,8 +99,6 @@ const ExperiencesCard = ({
 						backgroundColor={badgeColor}
 						pr="5px"
 						pl="5px"
-						pt="-2px"
-						pb="-2px"
 						fontSize="lg"
 						borderRadius="5px"
 					>
@@ -126,7 +123,12 @@ const ExperiencesCard = ({
 						<Portal>
 							<MenuList zIndex="1500">
 								{projects.map((p) => (
-									<MenuItem key={p}>{p}</MenuItem>
+									<MenuItem
+										key={p}
+										onClick={() => handleProjectClick(p)}
+									>
+										{p}
+									</MenuItem>
 								))}
 							</MenuList>
 						</Portal>

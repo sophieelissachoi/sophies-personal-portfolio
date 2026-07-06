@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import NavBar from "../Components/NavBar";
 import About from "./About";
 import Experiences from "./Experiences";
@@ -44,6 +46,16 @@ import Microsoft365 from "../assets/microsoft365.webp";
 import { Box } from "@chakra-ui/react";
 
 const MainPage = () => {
+	const [openProjectTitle, setOpenProjectTitle] = useState(null);
+
+	const scrollToProject = (title) => {
+		setOpenProjectTitle(title);
+		const el = document.getElementById("portfolio");
+		if (el) {
+			el.scrollIntoView({ behavior: "smooth", block: "start" });
+		}
+	};
+
 	const experiences = [
 		{
 			role: "Software Developer Intern",
@@ -219,32 +231,28 @@ const MainPage = () => {
 			pb="10%"
 		>
 			<NavBar />
-
-			<Box
-				bgImage={Paper}
-				minHeight="100vh"
-				width="100%"
-				pb="10%"
-			>
-				<NavBar />
-				<Box id="about">
-					<About />
-				</Box>
-				<Box id="experiences">
-					<Experiences
-						experiences={experiences}
-						projects={projects}
-					/>
-				</Box>
-				<Box id="portfolio">
-					<Portfolio projects={projects} />
-				</Box>
-				<Box id="skills">
-					<Skills skills={skills} />
-				</Box>
-				<Box id="contact">
-					<Contact />
-				</Box>
+			<Box id="about">
+				<About />
+			</Box>
+			<Box id="experiences">
+				<Experiences
+					experiences={experiences}
+					projects={projects}
+					onProjectClick={scrollToProject}
+				/>
+			</Box>
+			<Box id="portfolio">
+				<Portfolio
+					projects={projects}
+					openTitle={openProjectTitle}
+					setOpenTitle={setOpenProjectTitle}
+				/>
+			</Box>
+			<Box id="skills">
+				<Skills skills={skills} />
+			</Box>
+			<Box id="contact">
+				<Contact />
 			</Box>
 		</Box>
 	);
