@@ -12,7 +12,7 @@ import CCNA from "../assets/ccna.png";
 import GCF from "../assets/gcf.webp";
 import GCFDashboard from "../assets/gcf-dashboard.png";
 
-import HTML from "../assets/html.png";
+import HTML from "../assets/html.webp";
 import CSS from "../assets/css.png";
 import JavaScript from "../assets/javascript.png";
 import C from "../assets/c.png";
@@ -21,7 +21,7 @@ import XML from "../assets/xml.png";
 import Java from "../assets/java.webp";
 import Python from "../assets/python.png";
 import React from "../assets/react.svg";
-import Node from "../assets/node.png";
+import Node from "../assets/node.webp";
 import TailwindCSS from "../assets/tailwindcss.png";
 import MVVM from "../assets/mvvm.png";
 import Figma from "../assets/figma.png";
@@ -202,7 +202,7 @@ const MainPage = () => {
 		},
 		{
 			title: "Tools",
-			skills: ["Figma", "Firebase", "Unity", "Microsoft Office 365"],
+			skills: ["Figma", "Firebase", "Unity", "Microsoft 365"],
 			photos: [Figma, Firebase, Unity, Microsoft365],
 		},
 	];
