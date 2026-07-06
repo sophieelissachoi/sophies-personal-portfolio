@@ -167,7 +167,7 @@ const MainPage = () => {
 				"React, JavaScript, Axios, Chakra UI, Node.js, Express, REST API, PostgreSQL, AWS SDK, Firebase, Yarn, Agile methodology",
 			description:
 				"Global Creation Foundation (GCF) is a non-profit organization that expands music education to underserved communities across the globe. We built GCF a dashboard to help streamline organizing their programs, inventory, students, and more. There are unique features that are specifically tailored to their organization, such as role based access control, instrument tracking, program tracking, playlists, visual maps, etc. So far, GCF has donated 150+ instruments and has reached 500+ students in 6 different countries",
-			link: null,
+			link: "https://github.com/ctc-uci/gcf",
 			photo: GCF,
 			additionalPhoto: GCFDashboard,
 		},
