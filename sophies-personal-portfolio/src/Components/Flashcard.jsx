@@ -21,6 +21,7 @@ const Flashcard = ({ title, skills, description, additionalPhoto, link }) => {
 			<CardHeader>
 				<Heading size="md">{title}</Heading>
 			</CardHeader>
+
 			<CardBody mt="-2%">
 				<Text
 					fontWeight="bold"
@@ -28,18 +29,23 @@ const Flashcard = ({ title, skills, description, additionalPhoto, link }) => {
 				>
 					{skills}
 				</Text>
+
 				<Text mb="3">{description}</Text>
+
 				<Image
 					src={additionalPhoto}
 					mb="3px"
 				/>
-				<Link
-					href={link}
-					isExternal
-					color="blue.600"
-				>
-					Check it out! <ExternalLinkIcon mx="2px" />
-				</Link>
+
+				{link && (
+					<Link
+						href={link}
+						isExternal
+						color="blue.600"
+					>
+						Check it out! <ExternalLinkIcon mx="2px" />
+					</Link>
+				)}
 			</CardBody>
 		</Card>
 	);

@@ -2,6 +2,7 @@ import NavBar from "../Components/NavBar";
 import About from "./About";
 import Experiences from "./Experiences";
 import Portfolio from "./Portfolio";
+import Skills from "./Skills";
 import Paper from "../assets/paper.avif";
 import NAWCWD from "../assets/nawcwd.png";
 import Cyber from "../assets/cyber.png";
@@ -10,6 +11,34 @@ import Blockchain from "../assets/blockchain.png";
 import CCNA from "../assets/ccna.png";
 import GCF from "../assets/gcf.webp";
 import GCFDashboard from "../assets/gcf-dashboard.png";
+
+import HTML from "../assets/html.png";
+import CSS from "../assets/css.png";
+import JavaScript from "../assets/javascript.png";
+import C from "../assets/c.png";
+import CPP from "../assets/c++.webp";
+import XML from "../assets/xml.png";
+import Java from "../assets/java.webp";
+import Python from "../assets/python.png";
+import React from "../assets/react.svg";
+import Node from "../assets/node.png";
+import TailwindCSS from "../assets/tailwindcss.png";
+import MVVM from "../assets/mvvm.png";
+import Figma from "../assets/figma.png";
+import IaC from "../assets/iac.png";
+import Docker from "../assets/docker.png";
+import Firebase from "../assets/firebase.png";
+import Unity from "../assets/unity.avif";
+import GirlsWhoCode from "../assets/girlswhocode.webp";
+import Proxmox from "../assets/proxmox.png";
+import Authentik from "../assets/authentik.png";
+import Postgresql from "../assets/postgresql.png";
+import Chakra from "../assets/chakra.png";
+import TypeScript from "../assets/typescript.png";
+import ExpressJs from "../assets/expressjs.svg";
+import Linux from "../assets/linux.png";
+import Microsoft365 from "../assets/microsoft365.webp";
+
 import { Box } from "@chakra-ui/react";
 
 const MainPage = () => {
@@ -66,7 +95,8 @@ const MainPage = () => {
 			projects: ["Global Creation Foundation (GCF) Dashboard"],
 			skills: [
 				"React",
-				"Express.js",
+				"Node.js",
+				"Express",
 				"PostgreSQL",
 				"Chakra UI",
 				"HTML",
@@ -113,7 +143,7 @@ const MainPage = () => {
 			skills: "Go, React, TypeScript, Chakra UI, huma, chi, Proxmox API",
 			description:
 				"A Proxmox management frontend built with a Go backend (huma v2 framework, chi router, luthermonson/go-proxmox) and a React/TypeScript frontend. Includes endpoints for VM CRUD operations, config management, next VMID reservation, node stats, and job listing, paired with a dashboard featuring VM row cards, config drawers, and batch clone modals.",
-			link: "PLACEHOLDER — add GitHub repo or demo link",
+			link: null,
 			photo: Cyber,
 			additionalPhoto: null,
 		},
@@ -121,7 +151,7 @@ const MainPage = () => {
 			title: "GCF Dashboard",
 			skills: "PLACEHOLDER — add tech stack",
 			description: "PLACEHOLDER — add project description",
-			link: "PLACEHOLDER — add link",
+			link: null,
 			photo: GCF,
 			additionalPhoto: GCFDashboard,
 		},
@@ -130,9 +160,50 @@ const MainPage = () => {
 			skills: "Python, FastAPI, Slither, Solidity",
 			description:
 				"A smart contract security analysis pipeline using Slither to detect vulnerabilities like reentrancy in Solidity contracts. Successfully identified a reentrancy bug in a vulnerable vault contract, demonstrating automated static analysis for smart contract auditing.",
-			link: "PLACEHOLDER — add GitHub repo or demo link",
+			link: null,
 			photo: Blockchain,
 			additionalPhoto: null,
+		},
+	];
+
+	const skills = [
+		{
+			title: "Languages",
+			skills: [
+				"Python",
+				"JavaScript",
+				"TypeScript",
+				"Java",
+				"C++",
+				"C#",
+				"HTML",
+				"CSS",
+				"XML",
+			],
+			photos: [Python, JavaScript, TypeScript, Java, CPP, C, HTML, CSS, XML],
+		},
+		{
+			title: "Frameworks/Libraries",
+			skills: [
+				"React",
+				"Node.js",
+				"Express",
+				"PostgreSQL",
+				"MVVM",
+				"Chakra UI",
+				"Tailwind CSS",
+			],
+			photos: [React, Node, ExpressJs, Postgresql, MVVM, Chakra, TailwindCSS],
+		},
+		{
+			title: "Infrastructure",
+			skills: ["Docker", "Proxmox", "IaC", "Linux"],
+			photos: [Docker, Proxmox, IaC, Linux],
+		},
+		{
+			title: "Tools",
+			skills: ["Figma", "Firebase", "Unity", "Microsoft Office 365"],
+			photos: [Figma, Firebase, Unity, Microsoft365],
 		},
 	];
 
@@ -147,6 +218,7 @@ const MainPage = () => {
 			<About />
 			<Experiences experiences={experiences} />
 			<Portfolio projects={projects} />
+			<Skills skills={skills} />
 		</Box>
 	);
 };
