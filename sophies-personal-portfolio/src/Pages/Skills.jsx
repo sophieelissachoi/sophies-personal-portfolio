@@ -1,6 +1,6 @@
 import React from "react";
 import StickerSheet from "../Components/StickerSheet";
-import { Box, VStack, HStack, Heading } from "@chakra-ui/react";
+import { Box, VStack, HStack, Heading, Wrap, WrapItem } from "@chakra-ui/react";
 
 const Skills = ({ skills }) => {
 	const tilts = [-8, 6, -6, 9];
@@ -16,27 +16,29 @@ const Skills = ({ skills }) => {
 			<VStack>
 				<Heading
 					fontFamily="AmaticSC"
-					fontSize="60px"
+					fontSize={{ base: "40px", md: "50px", lg: "60px" }}
 					mb="5%"
 				>
 					Skills
 				</Heading>
 
-				<HStack
-					spacing="-20px"
-					align="flex-start"
+				<Wrap
+					spacing={{ base: "16px", md: "-20px" }}
+					justify="center"
+					px={{ base: "4%", md: "0" }}
 				>
 					{skills.map((s, i) => (
-						<StickerSheet
-							key={s.title}
-							title={s.title}
-							skills={s.skills}
-							photos={s.photos}
-							tilt={tilts[i % tilts.length]}
-							mt={offsets[i % offsets.length]}
-						/>
+						<WrapItem key={s.title}>
+							<StickerSheet
+								title={s.title}
+								skills={s.skills}
+								photos={s.photos}
+								tilt={tilts[i % tilts.length]}
+								mt={offsets[i % offsets.length]}
+							/>
+						</WrapItem>
 					))}
-				</HStack>
+				</Wrap>
 			</VStack>
 		</Box>
 	);

@@ -41,7 +41,8 @@ const ExperiencesCard = ({
 
 	return (
 		<Card
-			width="75rem"
+			width={{ base: "92vw", md: "90%", lg: "75rem" }}
+			maxWidth="75rem"
 			borderLeft="10px solid"
 			borderLeftColor={badgeColor}
 			bg="rgba(255, 255, 255, 0.25)"
@@ -50,37 +51,50 @@ const ExperiencesCard = ({
 			mt="20px"
 			zIndex="1"
 		>
-			<HStack align="flex-start">
+			<HStack
+				align="flex-start"
+				direction={{ base: "column", md: "row" }}
+				flexWrap={{ base: "wrap", md: "nowrap" }}
+				mt={{ base: "30px" }}
+				ml={{ base: "20px" }}
+			>
 				<Image
 					src={photo}
-					ml="20px"
+					ml={{ base: "0", md: "20px" }}
+					mx={{ base: "auto", md: "0" }}
+					mt={{ base: "16px", md: "0" }}
+					width={{ base: "120px", md: "auto" }}
 				/>
-				<VStack align="flex-start">
-					<CardHeader>
+				<VStack
+					align="flex-start"
+					mt="-30px"
+					w="100%"
+				>
+					<CardHeader pb={{ base: "0", md: undefined }}>
 						<Text
 							fontFamily="CaveatBrush"
-							fontSize="4xl"
+							fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
 						>
 							{role}
 						</Text>
 						<Text
 							fontFamily="CaveatBrush"
-							fontSize="3xl"
+							fontSize={{ base: "xl", md: "2xl", lg: "3xl" }}
 							mt="-10px"
 						>
 							{company}
 						</Text>
 					</CardHeader>
 					<CardBody
-						mt="-30"
-						ml="30"
+						mt={{ base: "-15px", md: "-30px" }}
+						ml={{ base: "10px", md: "30px" }}
 					>
 						<UnorderedList>
 							{description.map((d) => (
 								<ListItem
 									key={d}
 									fontFamily="CaveatBrush"
-									fontSize="2xl"
+									fontSize={{ base: "lg", md: "xl", lg: "2xl" }}
 								>
 									{d}
 								</ListItem>
@@ -93,13 +107,17 @@ const ExperiencesCard = ({
 			<Divider borderColor="gray.300" />
 
 			<CardFooter>
-				<HStack>
+				<HStack
+					flexWrap="wrap"
+					spacing="10px"
+					rowGap="10px"
+				>
 					<Badge
 						variant="solid"
 						backgroundColor={badgeColor}
 						pr="5px"
 						pl="5px"
-						fontSize="lg"
+						fontSize={{ base: "md", md: "lg" }}
 						borderRadius="5px"
 					>
 						{type}
@@ -117,6 +135,7 @@ const ExperiencesCard = ({
 							justifyContent="flex-start"
 							pr="10px"
 							pl="10px"
+							fontSize={{ base: "sm", md: "md" }}
 						>
 							PROJECTS
 						</MenuButton>
@@ -144,6 +163,7 @@ const ExperiencesCard = ({
 							bg="#614B49"
 							color="white"
 							justifyContent="flex-start"
+							fontSize={{ base: "sm", md: "md" }}
 						>
 							SKILLS
 						</MenuButton>

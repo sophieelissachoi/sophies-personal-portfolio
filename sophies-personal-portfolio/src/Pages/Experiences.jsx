@@ -10,10 +10,14 @@ const Experiences = ({ experiences, projects, onProjectClick }) => {
 			justifyContent="center"
 			alignItems="center"
 		>
-			<VStack>
+			<VStack
+				px={{ base: "4%", md: "0" }}
+				w="100%"
+			>
 				<Heading
 					fontFamily="AmaticSC"
-					fontSize="60px"
+					fontSize={{ base: "40px", md: "50px", lg: "60px" }}
+					mb="5%"
 				>
 					Experiences
 				</Heading>

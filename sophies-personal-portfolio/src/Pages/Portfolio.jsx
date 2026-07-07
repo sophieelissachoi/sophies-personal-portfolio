@@ -1,6 +1,6 @@
 import React from "react";
 import Polaroid from "../Components/Polaroid";
-import { Heading, Box, VStack, HStack } from "@chakra-ui/react";
+import { Heading, Box, VStack, Wrap, WrapItem } from "@chakra-ui/react";
 
 const Portfolio = ({ projects, openTitle, setOpenTitle }) => {
 	const tilts = [-8, 6, -6, 9];
@@ -23,34 +23,37 @@ const Portfolio = ({ projects, openTitle, setOpenTitle }) => {
 			<VStack>
 				<Heading
 					fontFamily="AmaticSC"
-					fontSize="60px"
+					fontSize={{ base: "40px", md: "50px", lg: "60px" }}
+					mb="5%"
 				>
 					Portfolio
 				</Heading>
 
-				<HStack
-					spacing="-20px"
-					align="flex-start"
+				<Wrap
+					spacing={{ base: "16px", md: "-20px" }}
+					justify="center"
+					px={{ base: "4%", md: "0" }}
 				>
 					{projects.map((p, i) => {
 						if (openTitle !== null && openTitle !== p.title) return null;
 
 						return (
-							<Polaroid
-								key={p.title}
-								title={p.title}
-								skills={p.skills}
-								description={p.description}
-								link={p.link}
-								photo={p.photo}
-								additionalPhoto={p.additionalPhoto}
-								tilt={tilts[i % tilts.length]}
-								isOpen={openTitle === p.title}
-								onClick={() => handleToggle(p.title)}
-							/>
+							<WrapItem key={p.title}>
+								<Polaroid
+									title={p.title}
+									skills={p.skills}
+									description={p.description}
+									link={p.link}
+									photo={p.photo}
+									additionalPhoto={p.additionalPhoto}
+									tilt={tilts[i % tilts.length]}
+									isOpen={openTitle === p.title}
+									onClick={() => handleToggle(p.title)}
+								/>
+							</WrapItem>
 						);
 					})}
-				</HStack>
+				</Wrap>
 			</VStack>
 		</Box>
 	);

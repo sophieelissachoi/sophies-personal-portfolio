@@ -27,13 +27,15 @@ const Polaroid = ({
 	return (
 		<HStack
 			align="flex-start"
-			spacing="16px"
+			spacing={{ base: "8px", md: "16px" }}
+			flexWrap={{ base: "wrap", md: "nowrap" }}
+			justify="center"
 		>
 			<Card
 				as="button"
 				onClick={onClick}
-				width="18rem"
-				height="24rem"
+				width={{ base: "14rem", sm: "16rem", md: "18rem" }}
+				height={{ base: "19rem", sm: "21rem", md: "24rem" }}
 				bg="white"
 				p="5px"
 				boxShadow="0 6px 16px rgba(139, 94, 77, 0.25)"
@@ -49,13 +51,19 @@ const Polaroid = ({
 					align="center"
 					justifyContent="center"
 					alignItems="center"
+					overflow="hidden"
 				>
-					<Image src={photo} />
+					<Image
+						src={photo}
+						maxW="100%"
+						maxH="100%"
+						objectFit="contain"
+					/>
 				</CardBody>
 
 				<Text
 					fontFamily="CaveatBrush"
-					fontSize="2xl"
+					fontSize={{ base: "xl", md: "2xl" }}
 					textAlign="center"
 				>
 					{title}
@@ -69,6 +77,9 @@ const Polaroid = ({
 						animate={{ opacity: 1, x: 0, scale: 1 }}
 						exit={{ opacity: 0, x: -30, scale: 0.9 }}
 						transition={{ duration: 0.25 }}
+						width={{ base: "100%", md: "auto" }}
+						display="flex"
+						justifyContent="center"
 					>
 						<Flashcard
 							title={title}

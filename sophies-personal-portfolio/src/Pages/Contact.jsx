@@ -13,7 +13,7 @@ const Contact = () => {
 			<VStack>
 				<Heading
 					fontFamily="AmaticSC"
-					fontSize="60px"
+					fontSize={{ base: "40px", md: "50px", lg: "60px" }}
 					mb="5%"
 				>
 					Contact
@@ -26,10 +26,13 @@ const Contact = () => {
 					mt="20px"
 					spacing="2"
 				>
-					<HStack>
+					<HStack
+						flexWrap="wrap"
+						justify="center"
+					>
 						<Text
-							width="140px"
-							textAlign="right"
+							width={{ base: "auto", sm: "140px" }}
+							textAlign={{ base: "left", sm: "right" }}
 							fontWeight="bold"
 						>
 							Personal Email:
@@ -38,8 +41,8 @@ const Contact = () => {
 					</HStack>
 					<HStack>
 						<Text
-							width="140px"
-							textAlign="right"
+							width={{ base: "auto", sm: "140px" }}
+							textAlign={{ base: "left", sm: "right" }}
 							fontWeight="bold"
 						>
 							School Email:
