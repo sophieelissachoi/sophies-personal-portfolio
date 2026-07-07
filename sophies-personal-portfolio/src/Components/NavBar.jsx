@@ -14,23 +14,23 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
-const scrollToSection = (id) => {
-	const el = document.getElementById(id);
-	if (el) {
-		el.scrollIntoView({ behavior: "smooth", block: "start" });
-	}
-};
-
-const sections = [
-	{ id: "about", label: "About" },
-	{ id: "experiences", label: "Experiences" },
-	{ id: "portfolio", label: "Portfolio" },
-	{ id: "skills", label: "Skills" },
-	{ id: "contact", label: "Contact" },
-];
-
 const Navbar = () => {
+	const sections = [
+		{ id: "about", label: "About" },
+		{ id: "experiences", label: "Experiences" },
+		{ id: "portfolio", label: "Portfolio" },
+		{ id: "skills", label: "Skills" },
+		{ id: "contact", label: "Contact" },
+	];
+
 	const isMobile = useBreakpointValue({ base: true, md: false });
+
+	const scrollToSection = (id) => {
+		const el = document.getElementById(id);
+		if (el) {
+			el.scrollIntoView({ behavior: "smooth", block: "start" });
+		}
+	};
 
 	return (
 		<HStack
