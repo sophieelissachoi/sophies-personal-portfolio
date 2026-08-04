@@ -18,8 +18,8 @@ const StickerSheet = ({ title, skills, photos, tilt, mt }) => {
 			bgSize="cover"
 			bgRepeat="no-repeat"
 			bgPosition="center"
-			width={"300px"}
-			height={"400px"}
+			width={"320px"}
+			height={"450px"}
 			transform={`rotate(${tilt}deg)`}
 			mt={mt}
 			border="none"

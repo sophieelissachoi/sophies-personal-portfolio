@@ -42,6 +42,11 @@ import TypeScript from "../assets/typescript.png";
 import ExpressJs from "../assets/expressjs.svg";
 import Linux from "../assets/linux.png";
 import Microsoft365 from "../assets/microsoft365.webp";
+import DotNET from "../assets/dotnet.png";
+import WPF from "../assets/wpf.png";
+import NAS from "../assets/nas.png";
+import Git from "../assets/git.png";
+import GitLab from "../assets/gitlab.png";
 
 import { Box } from "@chakra-ui/react";
 
@@ -61,27 +66,35 @@ const MainPage = () => {
 			role: "Software Developer Intern",
 			company: "Naval Air Warfare Center Weapons Division (NAWCWD)",
 			description: [
-				"Engineered a WPF GUI (MVVM, C#/XML) to transmit positioning and tasking data to a radar system on San Nicolas Island, applying unit testing across the full SDLC to ensure reliable deployment to live hardware",
-				"Gained hands-on exposure to radar tasking and command protocols, including detection, tracking, and hand-off of high-altitude objects",
+				"Co-authored a bidirectional real-time C#/.NET application (WPF, MVVM) that transmits positioning commands to a $6M Weibel radar system and parses live radar telemetry from 9 targets into human-readable format in real-time, streamlining military range testing operations",
+				"Developed a C#/.NET system configuration parser to validate network socket connections at startup and authored OOP data structures that bridge frontend display and backend logic, ensuring the application launches reliably before real-time operations begin",
+				"Presented system architecture, UML, and XAML GUI diagrams based on software requirements at critical design reviews, aligning hardware stakeholders on implementation decisions before development milestones",
+				"Authored the full unit test suite in C#, covering end-to-end network connectivity, debugged integration failures, and wrote application test procedure documentation to standardize SDLC validation",
 			],
 			type: "Internship",
 			projects: ["Weibel Radar Application"],
 			skills: [
+				"C#",
+				".NET",
+				"WPF",
+				"MVVM",
+				"OOP",
+				"UML",
 				"XAML",
-				"Windows Presentation Foundation (WPF)",
-				"Model-view-viewmodel (MVVM)",
-				"Object-Oriented Programming (OOP)",
+				"Networking",
+				"Unit Testing",
 			],
 			photo: NAWCWD,
 		},
 		{
-			role: "Infrastructure Lead",
+			role: "Co-Infrastructure Lead",
 			company: "Cyber @ UCI Infrastructure Team",
 			description: [
-				"Decommissioned servers and reorganized network topology for clearer operational visibility",
-				"Leading and designing UI/UX workflows in Figma for internal tooling (Docker, Kubernetes, CI/CD), such as an internal VM provisioning tool that abstracts complex infrastructure workflows for club members",
-				"Deployed Proxmox VE high-availability clustering and load balancing, improving VM failover reliability by 80% and eliminating single points of failure across the cluster",
-				"Implemented SSO integration, Infrastructure as Code (IaC) tools, and CCNA networking concepts within a production environment",
+				"Leading architecture and Figma UI/UX design for 4 internal tools built with React, GitLab, and Docker, including a VM provisioning tool serving 20+ internal club members",
+				"Maintained SSO (Authentik), IaC tooling, Proxmox virtualization with Linux, and Docker containerization across a production network serving 100+ club members, ensuring up-time and security for training and workshops",
+				"Reduced cluster overhead by 25% and improved operational efficiency by doing routine maintenance on the Proxmox hypervisor server cluster (Linux) and reorganizing NFS storage configurations",
+				"Improved storage bandwidth to 40 GB/s by configuring a dedicated storage switch connecting Proxmox hypervisor nodes to a NAS using CLI-based network configuration, isolating storage traffic from the production network",
+				"Deployed Proxmox VE high-availability clustering and load balancing, eliminating single points of failure across the cluster to ensure uninterrupted access to club infrastructure",
 			],
 			type: "Club",
 			projects: ["EasyVM"],
@@ -89,11 +102,14 @@ const MainPage = () => {
 				"Docker",
 				"Linux",
 				"Proxmox",
-				"Terraform",
+				"IaC",
 				"Networking",
 				"Virtualization",
 				"Figma",
 				"React",
+				"GitLab",
+				"Authentik",
+				"NAS Admin",
 			],
 			photo: Cyber,
 		},
@@ -101,9 +117,9 @@ const MainPage = () => {
 			role: "Full-Stack Developer",
 			company: "Commit the Change",
 			description: [
-				"Programmed a full-stack application using React, Express.js, PostgreSQL, and Chakra UI, enabling scalable data management and real-time program oversight for a global NPO operating in 5 continents",
-				"Deployed RESTful APIs in Express.js with full CRUD functionality and Promise-based concurrent data fetching, streamlining frontend–backend data flow and improving platform performance by 25%",
-				"Collaborated in Agile sprints with pair programming and direct client feedback to ship features against a 2-week deadline",
+				"Programmed a full-stack application using React, Express.js, PostgreSQL, and CSS, enabling scalable data management and real-time program oversight for a global NPO operating in 5 continents",
+				"Deployed RESTful APIs in JavaScript with full CRUD functionality and Promise-based concurrent data fetching, optimizing frontend–backend data flow and improving platform performance by ~25%",
+				"Collaborated in Agile sprints with pair programming and Git to ship React features against 2-week deadlines with evolving client requirements",
 			],
 			type: "Club",
 			projects: ["GCF Dashboard"],
@@ -112,10 +128,9 @@ const MainPage = () => {
 				"Node.js",
 				"Express",
 				"PostgreSQL",
-				"Chakra UI",
-				"HTML",
 				"CSS",
 				"Agile Methodologies",
+				"Git",
 			],
 			photo: CTC,
 		},
@@ -123,21 +138,99 @@ const MainPage = () => {
 			role: "Software Developer",
 			company: "Blockchain @ UCI Smart Contract Team",
 			description: [
-				"Engineered an AI-powered exploit generation engine using OpenAI APIs and Anvil local chain, delivering binary proof-of-concept attacks on live contract state rather than theoretical vulnerability reports",
-				"Built a Python Slither static analysis module detecting reentrancy, access control, and logic flaws, structuring findings as JSON to feed a downstream LangGraph agent pipeline",
-				"Containerized the platform with Docker and designed a shared Postgres/pgvector database architecture, enabling consistent multi-developer access to run state and grounding data",
+				"Engineered an AI-powered exploit generation engine using Python, RESTful APIs, and Anvil local chain, delivering binary proof-of-concept attacks on live contract state rather than theoretical vulnerability reports",
+				"Built a Python Slither static analysis module detecting reentrancy, access control, and logic flaws in a smart contract, structuring findings as JSON to feed a downstream LangGraph agent pipeline",
+				"Containerized the platform with Docker and designed a shared Postgres/pgvector database architecture, giving all developers a consistent environment and eliminating data inconsistencies across the team",
 			],
 			type: "Club",
 			projects: ["Smart Contract Security"],
 			skills: [
 				"Python",
 				"Smart Contracts",
-				"Solidity",
 				"Docker",
 				"PostgreSQL",
-				"OpenAI API",
+				"pgvector",
+				"LangGraph",
 			],
 			photo: Blockchain,
+		},
+	];
+
+	const skills = [
+		{
+			title: "Languages",
+			skills: [
+				"Python",
+				"C++",
+				"C#",
+				"JavaScript",
+				"TypeScript",
+				"Java",
+				"HTML",
+				"CSS",
+				"XML",
+			],
+			photos: [Python, CPP, C, JavaScript, TypeScript, Java, HTML, CSS, XML],
+		},
+		{
+			title: "Frameworks/Libraries",
+			skills: [
+				"React",
+				"Node.js",
+				"Express",
+				"PostgreSQL",
+				".NET",
+				"WPF",
+				"MVVM",
+				"Tailwind CSS",
+			],
+			photos: [
+				React,
+				Node,
+				ExpressJs,
+				Postgresql,
+				DotNET,
+				WPF,
+				MVVM,
+				TailwindCSS,
+			],
+		},
+		{
+			title: "Tools",
+			skills: [
+				"Docker",
+				"Proxmox",
+				"IaC",
+				"Linux",
+				"NAS Admin",
+				"Git",
+				"GitLab",
+				"Figma",
+				"Firebase",
+				"Unity",
+				"Microsoft 365",
+			],
+			photos: [
+				Docker,
+				Proxmox,
+				IaC,
+				Linux,
+				NAS,
+				Git,
+				GitLab,
+				Figma,
+				Firebase,
+				Unity,
+				Microsoft365,
+			],
+		},
+		{
+			title: "Certifications",
+			skills: [
+				"Cisco Certified Network Associate (CCNA)",
+				"Girls Who Code: Data Science for Good",
+			],
+			photos: [CCNA, GirlsWhoCode],
 		},
 	];
 
@@ -150,6 +243,15 @@ const MainPage = () => {
 				"Implementing and Administering Cisco Solutions (200-301 CCNA) v1.1 is a 120-minute exam that tests a candidate's knowledge and skills related to network fundamentals, network access, IP connectivity, IP services, security fundamentals, and automation and programmability.",
 			link: "https://www.credly.com/badges/8329bc37-057e-4b79-813d-79f29889ab9e/linked_in_profile",
 			photo: CCNA,
+			additionalPhoto: null,
+		},
+		{
+			title: "Weibel Radar Application",
+			skills: "C#, .NET, WPF, MVVM, XAML, UML, Unit Testing",
+			description:
+				"A bidirectional real-time C#/.NET application (WPF, MVVM) that transmits positioning commands to a $6M Weibel radar system and parses live radar telemetry from 9 targets into human-readable format in real-time, streamlining military range testing operations at NAWCWD Point Mugu.",
+			link: null,
+			photo: NAWCWD,
 			additionalPhoto: null,
 		},
 		{
@@ -179,47 +281,6 @@ const MainPage = () => {
 			link: null,
 			photo: Blockchain,
 			additionalPhoto: null,
-		},
-	];
-
-	const skills = [
-		{
-			title: "Languages",
-			skills: [
-				"Python",
-				"JavaScript",
-				"TypeScript",
-				"Java",
-				"C++",
-				"C#",
-				"HTML",
-				"CSS",
-				"XML",
-			],
-			photos: [Python, JavaScript, TypeScript, Java, CPP, C, HTML, CSS, XML],
-		},
-		{
-			title: "Frameworks/Libraries",
-			skills: [
-				"React",
-				"Node.js",
-				"Express",
-				"PostgreSQL",
-				"MVVM",
-				"Chakra UI",
-				"Tailwind CSS",
-			],
-			photos: [React, Node, ExpressJs, Postgresql, MVVM, Chakra, TailwindCSS],
-		},
-		{
-			title: "Infrastructure",
-			skills: ["Docker", "Proxmox", "IaC", "Linux"],
-			photos: [Docker, Proxmox, IaC, Linux],
-		},
-		{
-			title: "Tools",
-			skills: ["Figma", "Firebase", "Unity", "Microsoft 365"],
-			photos: [Figma, Firebase, Unity, Microsoft365],
 		},
 	];
 
