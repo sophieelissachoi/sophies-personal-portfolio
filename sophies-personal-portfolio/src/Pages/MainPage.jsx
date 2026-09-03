@@ -47,6 +47,8 @@ import WPF from "../assets/wpf.png";
 import NAS from "../assets/nas.png";
 import Git from "../assets/git.png";
 import GitLab from "../assets/gitlab.png";
+import K8 from "../assets/k8.png";
+import Go from "../assets/go.png";
 
 import { Box } from "@chakra-ui/react";
 
@@ -107,7 +109,7 @@ const MainPage = () => {
 				"Virtualization",
 				"Figma",
 				"React",
-				"GitLab",
+				"GitLab CI/CD",
 				"Authentik",
 				"NAS Admin",
 			],
@@ -163,6 +165,7 @@ const MainPage = () => {
 				"Python",
 				"C++",
 				"C#",
+				"Go",
 				"JavaScript",
 				"TypeScript",
 				"Java",
@@ -170,7 +173,18 @@ const MainPage = () => {
 				"CSS",
 				"XML",
 			],
-			photos: [Python, CPP, C, JavaScript, TypeScript, Java, HTML, CSS, XML],
+			photos: [
+				Python,
+				CPP,
+				C,
+				Go,
+				JavaScript,
+				TypeScript,
+				Java,
+				HTML,
+				CSS,
+				XML,
+			],
 		},
 		{
 			title: "Frameworks/Libraries",
@@ -199,12 +213,13 @@ const MainPage = () => {
 			title: "Tools",
 			skills: [
 				"Docker",
+				"Kubernetes",
 				"Proxmox",
 				"IaC",
 				"Linux",
 				"NAS Admin",
 				"Git",
-				"GitLab",
+				"GitLab CI/CD",
 				"Figma",
 				"Firebase",
 				"Unity",
@@ -212,6 +227,7 @@ const MainPage = () => {
 			],
 			photos: [
 				Docker,
+				K8,
 				Proxmox,
 				IaC,
 				Linux,
