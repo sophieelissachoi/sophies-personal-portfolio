@@ -21,7 +21,7 @@ import CSS from "../assets/css.png";
 import JavaScript from "../assets/javascript.png";
 import C from "../assets/c.png";
 import CPP from "../assets/c++.webp";
-import XML from "../assets/xml.png";
+import XAML from "../assets/XAML.png";
 import Java from "../assets/java.webp";
 import Python from "../assets/python.png";
 import React from "../assets/react.svg";
@@ -169,7 +169,7 @@ const MainPage = () => {
 				"Java",
 				"HTML",
 				"CSS",
-				"XML",
+				"XAML",
 			],
 			photos: [
 				Python,
@@ -181,7 +181,7 @@ const MainPage = () => {
 				Java,
 				HTML,
 				CSS,
-				XML,
+				XAML,
 			],
 		},
 		{
