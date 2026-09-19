@@ -44,4 +44,4 @@ jobs:
         with:
           context: ./sophies-personal-portfolio
           push: true
-          tags: react-docker/sophies-personal-portfolio-build:latest
+          tags: sechoi3/react-docker:latest
