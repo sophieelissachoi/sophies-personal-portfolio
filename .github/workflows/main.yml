@@ -1,7 +1,7 @@
-name: Deploy to GitHub Pages
+name: Set Up Deployment
 on: [push]
 jobs:
-  deploy:
+  setup:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -15,8 +15,3 @@ jobs:
           node-version: 22.16.0
           cache: npm
           cache-dependency-path: sophies-personal-portfolio/package-lock.json
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
